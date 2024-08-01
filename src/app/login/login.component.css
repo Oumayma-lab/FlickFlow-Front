@@ -1,7 +1,7 @@
 div#Login {
   width: 100%;
   min-height: 100vh;
-  background-image: url("../assets/login-background.jpg");
+  background-image: url("../../assets/login-background.jpg");
   @media (max-width: 425px) {
     background-image: none;
     /*background-color: #000;*/
