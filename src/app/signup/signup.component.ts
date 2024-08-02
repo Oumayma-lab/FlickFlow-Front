@@ -22,11 +22,7 @@ import {UserDto} from "../models/UserDto";
 })
 export class SignupComponent {
   signupForm: FormGroup;
-  images = [
-    {src: 'assets/images/image1.jpg', alt: 'Description of image 1', class: 'horizontal'},
-    {src: 'assets/images/image2.jpg', alt: 'Description of image 2', class: 'horizontal'},
-    {src: 'assets/images/image3.jpg', alt: 'Description of image 3', class: 'horizontal'},
-  ];
+
 
   constructor(private fb: FormBuilder, private userService: UserService, private router: Router) {
     this.signupForm = this.fb.group({

@@ -4,21 +4,21 @@ div#Login {
   background-image: url("../../assets/login-background.jpg");
   @media (max-width: 425px) {
     background-image: none;
-    /*background-color: #000;*/
+    background-color: #fff;
+    border-radius: 35px;
   }
-
   > div.opactity_controller {
     width: 100%;
     min-height: 100vh;
     /*background-color: rgba(0, 0, 0, 0.5);*/
-
     display: grid;
     grid-template-rows: auto 1fr auto;
 
+    backdrop-filter: blur(2px); /* Adjust the blur intensity as needed */
+    -webkit-backdrop-filter: blur(1px); /* For Safari */
     > header {
       padding: 24px 5%;
       width: 100%;
-
       > img {
         width: 167px;
         @media (max-width: 360px) {
@@ -30,19 +30,20 @@ div#Login {
     div.content {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      margin-bottom: 85px;
-
+      margin-bottom: 70px;
+      align-items: center; /* Keep it centered */
+      /*padding-left: 100px; !* Add padding to the left *!*/
       > div {
-        background-color: rgba(0, 0, 0, 0.75);
-        border-radius: 4px;
-        padding: 64px;
+        /*background-color: rgba(0, 0, 0, 0.68);*/
+        /*backdrop-filter: blur(10px); !* Adjust the blur intensity as needed *!*/
+        /*-webkit-backdrop-filter: blur(10px); !* For Safari *!*/
+        /*border-radius: 35px;*/
+        /*padding: 64px;*/
         min-height: 660px;
-        min-width: 440px;
+        min-width: 400px;
 
         @media (max-width: 425px) {
           background-color: transparent;
-          padding: 0;
           min-height: 0;
           min-width: 0;
           display: flex;
@@ -71,6 +72,7 @@ div#Login {
             margin-bottom: 16px;
             background-color: var(--dark-gray);
             color: #fff;
+            border-radius: 50px; /* Added border-radius */
 
             &::placeholder {
               color: var(--text-gray);
@@ -85,6 +87,7 @@ div#Login {
             font-size: 16px;
             margin-top: 16px;
             margin-bottom: 16px;
+            border-radius: 40px;
           }
 
           > div {
@@ -95,20 +98,21 @@ div#Login {
             > label {
               display: flex;
               align-items: center;
+              color: #fff; /* Set label color to white */
+
             }
 
             > label > input {
-              margin-top: 2px;
+              margin-top: 1px;
               margin-right: 4px;
             }
 
             > label > span {
-              color: var(--color-gray);
               font-size: 13px;
             }
 
             > a {
-              color: var(--color-gray);
+              color: #fff;
               text-decoration: none;
               font-size: 13px;
 
@@ -148,7 +152,7 @@ div#Login {
           color: var(--text-gray);
           font-size: 13px;
           > a {
-            color: #0071eb;
+            color: red;
             text-decoration: none;
             &:hover {
               text-decoration: underline;
@@ -249,4 +253,7 @@ div#Login {
       }
     }
   }
+}
+.label-white {
+  color: rgb(255, 255, 255);
 }

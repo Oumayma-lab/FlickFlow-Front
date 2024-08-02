@@ -1,72 +1,73 @@
-<div class="login-container">
-  <div class="login-left">
-    <h2>Sign up! </h2>
-    <p>How do I get started?</p>
-    <p>Login with Email</p>
-    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
-      <label for="name">Name</label>
-      <input type="text" formControlName="name" id="name" placeholder="John">
-      <div *ngIf="hasError('name', 'required')">
-        <small class="error">Name is required</small>
-      </div>
+<div id="Login">
+  <div class="opacity_controller">
+    <header>
+      <img src="../../assets/logo.png" alt="logo" />
+    </header>
 
-      <label for="lastname">Last Name</label>
-      <input type="text" formControlName="lastname" id="lastname" placeholder="Doe">
-      <div *ngIf="hasError('lastname', 'required')">
-        <small class="error">Last Name is required</small>
-      </div>
-
-      <label for="username">UserName</label>
-      <input type="text" formControlName="username" id="username" placeholder="JohnDoe12">
-      <div *ngIf="hasError('username', 'required')">
-        <small class="error">UserName is required</small>
-      </div>
-
+    <div class="content">
       <div>
-        <label>Subscription Type</label>
-        <div class="radio">
-          <label for="free">Free</label>
-          <input type="radio" formControlName="subscriptionType" id="free" value="free">
-        </div>
-        <div class="radio">
-          <label for="paid">Paid</label>
-          <input type="radio" formControlName="subscriptionType" id="paid" value="paid">
-        </div>
-      </div>
-      <div *ngIf="hasError('subscriptionType', 'required')">
-        <small class="error">Subscription Type is required</small>
-      </div>
+        <h1>Sign up! </h1>
+        <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+          <label for="name" class="label-white">Name</label>
+          <input type="text" formControlName="name" id="name" placeholder="John">
+          <div *ngIf="hasError('name', 'required')">
+            <small class="error">Name is required</small>
+          </div>
 
-      <label for="birthdate">Birthdate</label>
-      <input type="date" formControlName="birthdate" id="birthdate">
-      <div *ngIf="hasError('birthdate', 'required')">
-        <small class="error">Birthdate is required</small>
-      </div>
+          <label for="lastname" class="label-white">Last Name</label>
+          <input type="text" formControlName="lastname" id="lastname" placeholder="Doe">
+          <div *ngIf="hasError('lastname', 'required')">
+            <small class="error">Last Name is required</small>
+          </div>
 
-      <label for="email">Email</label>
-      <input type="email" formControlName="email" id="email" placeholder="test@example.com">
-      <div *ngIf="hasError('email', 'required')">
-        <small class="error">Email is required</small>
-      </div>
-      <div *ngIf="hasError('email', 'email')">
-        <small class="error">Valid email is required</small>
-      </div>
+          <label for="username" class="label-white">UserName</label>
+          <input type="text" formControlName="username" id="username" placeholder="JohnDoe12">
+          <div *ngIf="hasError('username', 'required')">
+            <small class="error">UserName is required</small>
+          </div>
 
-      <label for="password">Password</label>
-      <input type="password" formControlName="password" id="password" placeholder="******">
-      <div *ngIf="hasError('password', 'required')">
-        <small class="error">Password is required</small>
+          <div>
+            <label class="label-white">Subscription Type</label>
+            <div class="radio">
+              <label for="free" class="label-white">Free</label>
+              <input type="radio" formControlName="subscriptionType" id="free" value="free">
+            </div>
+            <div class="radio">
+              <label for="paid" class="label-white">Paid</label>
+              <input type="radio" formControlName="subscriptionType" id="paid" value="paid">
+            </div>
+          </div>
+          <div *ngIf="hasError('subscriptionType', 'required')">
+            <small class="error">Subscription Type is required</small>
+          </div>
+
+          <label for="birthdate" class="label-white">Birthdate</label>
+          <input type="date" formControlName="birthdate" id="birthdate">
+          <div *ngIf="hasError('birthdate', 'required')">
+            <small class="error">Birthdate is required</small>
+          </div>
+
+          <label for="email" class="label-white">Email</label>
+          <input type="email" formControlName="email" id="email" placeholder="test@example.com">
+          <div *ngIf="hasError('email', 'required')">
+            <small class="error">Email is required</small>
+          </div>
+          <div *ngIf="hasError('email', 'email')">
+            <small class="error">Valid email is required</small>
+          </div>
+
+          <label for="password" class="label-white">Password</label>
+          <input type="password" formControlName="password" id="password" placeholder="******">
+          <div *ngIf="hasError('password', 'required')">
+            <small class="error">Password is required</small>
+          </div>
+
+          <button type="submit" class="btn btn-signin">Sign Up</button>
+        </form>
+        <p>Already have an account? <a routerLink="/login">Login now!</a></p>
       </div>
-
-      <button type="submit" class="btn btn-signin">Sign Up</button>
-    </form>
-    <p>Already have an account? <a routerLink="/login">Login now!</a></p>
-  </div>
-
-  <div class="login-right">
-    <div class="login-info">
-      <h3>Why should I sign up?</h3>
-      <p>By signing up, you can access your personal dashboard, where you can manage your account, view your profile, and much more.</p>
     </div>
+
+
   </div>
 </div>
