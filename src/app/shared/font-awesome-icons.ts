@@ -1,1 +1,8 @@
-// export const fontAwesomeIcons: IconeDefinition[]=[]
+import {IconDefinition} from "@fortawesome/angular-fontawesome";
+import {faCircleInfo, faPlay, faSearch} from "@fortawesome/free-solid-svg-icons";
+
+export const fontAwesomeIcons: IconDefinition[]=[
+  faPlay,
+  faCircleInfo,
+  faSearch
+]

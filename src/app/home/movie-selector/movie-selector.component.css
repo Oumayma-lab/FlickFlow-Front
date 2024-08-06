@@ -1,0 +1,8 @@
+.main-content {
+  transform: translate(0px, -110px);
+  background-color: #141414; /* Dark color similar to Netflix */
+  color: #fff; /* Text color to contrast with the dark background */
+  min-height: 100vh; /* Ensure the background covers the full viewport height */
+  padding: 0;
+  margin: 0;
+}

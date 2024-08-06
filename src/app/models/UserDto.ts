@@ -2,10 +2,11 @@ export interface UserDto {
   id?: number;
   username: string;
   password?: string;
-  name: string;
+  firstname: string;
   lastname: string;
-  birthdate: Date | string;
+  birthday: string ;
   subscriptionType: string;
   email: string;
   roles?: string[];
+  joindate?: string; // Optional as it will be set on the backend
 }

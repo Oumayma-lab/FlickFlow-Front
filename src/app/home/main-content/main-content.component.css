@@ -1,0 +1,61 @@
+.main {
+  height: 800px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #141414; /* Dark background */
+
+}
+
+@media (max-width: 768px) {
+  .main {
+    height: 600px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    height: 400px;
+  }
+}
+
+.ms-5 {
+  margin-left: 3rem;
+}
+
+.overview {
+  color: white;
+  font-size: 13px;
+  max-height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.overview::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -17px;
+  width: 1px;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+  pointer-events: none;
+}
+
+h1 {
+  color: red;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  text-align: center; /* Center text inside the button */
+  height: 44px; /* Set a specific height */
+}
+
+.btn fa-icon {
+  margin-right: 10px; /* Space between icon and text */
+  font-size: 0.7em; /* Adjust icon size */
+}

@@ -9,7 +9,7 @@
         <h1>Sign up! </h1>
         <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
           <label for="name" class="label-white">Name</label>
-          <input type="text" formControlName="name" id="name" placeholder="John">
+          <input type="text" formControlName="firstname" id="name" placeholder="John">
           <div *ngIf="hasError('name', 'required')">
             <small class="error">Name is required</small>
           </div>
@@ -21,7 +21,7 @@
           </div>
 
           <label for="username" class="label-white">UserName</label>
-          <input type="text" formControlName="username" id="username" placeholder="JohnDoe12">
+          <input type="text" formControlName="username" id="username" placeholder="johnny">
           <div *ngIf="hasError('username', 'required')">
             <small class="error">UserName is required</small>
           </div>
@@ -42,7 +42,7 @@
           </div>
 
           <label for="birthdate" class="label-white">Birthdate</label>
-          <input type="date" formControlName="birthdate" id="birthdate">
+          <input type="date" formControlName="birthday" id="birthdate">
           <div *ngIf="hasError('birthdate', 'required')">
             <small class="error">Birthdate is required</small>
           </div>
